@@ -17,24 +17,17 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction_ * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-	
-	#diagonal direction speed control 
-	var diagonal_direction := direction + direction_
-	if diagonal_direction == 2:
-		velocity.x = direction * SPEED * 0.707
-		velocity.y = direction_ * SPEED * 0.707
-		$Label.text = "x:" + str(velocity.x).pad_decimals(2) + "y: " + str(velocity.y).pad_decimals(2)
-	elif diagonal_direction == -2:
-		velocity.x = move_toward(velocity.x, 0, SPEED * 0.707)
-		velocity.y = move_toward(velocity.y, 0, SPEED * 0.707)
-		$Label.text = "x:" + str(velocity.x).pad_decimals(2) + "y: " + str(velocity.y).pad_decimals(2)
-	else: 
-		velocity.x = move_toward(velocity.x, 0, SPEED * 0.707)
-		velocity.y = move_toward(velocity.y, 0, SPEED * 0.707)
-		velocity.x = direction * SPEED * 0.707
-		velocity.y = direction_ * SPEED * 0.707
-		$Label.text = "x:" + str(velocity.x).pad_decimals(2) + "y: " + str(velocity.y).pad_decimals(2)
-	
 
+	#diagonal direction speed control 
+	if direction and direction_:
+		velocity.x = direction * SPEED * 0.707
+		velocity.y = direction_ * SPEED * 0.707
+		$Label.text = "x:" + str(velocity.x).pad_decimals(2) + "y: " + str(velocity.y).pad_decimals(2)
+	elif direction != 0: 
+		velocity.x = direction * SPEED
+		velocity.y = 0
+	elif direction_ != 0:
+		velocity.x = 0
+		velocity.y = direction_ * SPEED
 
 	move_and_slide()
