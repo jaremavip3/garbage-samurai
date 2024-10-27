@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dri2mpqu1srq4"
-path="res://.godot/imported/Water.png-6bea1d5a26bc137e6008309eccc81d73.ctex"
+uid="uid://bp13apq0m4hp8"
+path="res://.godot/imported/Cat Sprite Sheet.png-e4263191ae5f12fb1aa9672d887dbd6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilesets/Water.png"
-dest_files=["res://.godot/imported/Water.png-6bea1d5a26bc137e6008309eccc81d73.ctex"]
+source_file="res://assets/Characters/Cat Sprite Sheet.png"
+dest_files=["res://.godot/imported/Cat Sprite Sheet.png-e4263191ae5f12fb1aa9672d887dbd6f.ctex"]
 
 [params]
 
