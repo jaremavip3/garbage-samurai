@@ -13,7 +13,7 @@ func _ready() -> void:
 		rand_y = randi_range(-200, 200)
 		tree.global_position = Vector2(rand_x, rand_y)
 		add_child(tree)
-		
+			
 	randomize()
 	for i in range(20):
 		var rock = preload("res://scenes/stone.tscn").instantiate()
