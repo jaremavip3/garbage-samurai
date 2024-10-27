@@ -5,7 +5,6 @@ var rand_y
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#spawn the obstacles
 	randomize()
 	for i in range(50):
 		var tree = preload("res://scenes/Tree.tscn").instantiate()
@@ -23,7 +22,6 @@ func _ready() -> void:
 		rock.global_position = Vector2(rand_x, rand_y)
 		add_child(rock)
 		
-<<<<<<< Updated upstream
 	randomize()
 	for i in range(40):
 		var volcano_tree = preload("res://scenes/VolcanoTree.tscn").instantiate()
@@ -40,16 +38,6 @@ func _ready() -> void:
 		cactus.global_position = Vector2(rand_x, rand_y)
 		add_child(cactus)
 		
-=======
-	#spawn the trash
-	var total_trash = randi_range(10, 50)
-	for i in total_trash:
-		var trash = preload("res://scenes/trash.tscn").instantiate()
-		rand_x = randi_range(-200, 200)
-		rand_y = randi_range(-200, 200)
-		trash.global_position = Vector2(rand_x, rand_y)
-		add_child(trash)
->>>>>>> Stashed changes
 		
 	
 
