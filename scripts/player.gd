@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+const _speed = 100.0
+const SPRINT_MULTIPLIER = 5 
 @onready var animated_sprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
+	var SPEED = _speed
+	if Input.is_action_pressed("ui_shift"):
+		SPEED *= SPRINT_MULTIPLIER
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -37,5 +41,6 @@ func _physics_process(delta: float) -> void:
 		animated_sprite2D.flip_h = false
 	else: 
 		animated_sprite2D.flip_h = true
+		
 
 	move_and_slide()
