@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bm1qrgvmngb3y"]
+[gd_scene load_steps=22 format=3 uid="uid://bm1qrgvmngb3y"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_604of"]
 [ext_resource type="PackedScene" uid="uid://c7n4licchq407" path="res://scenes/player.tscn" id="1_a8hew"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://xpqmfbwr12cx" path="res://assets/Tilesets/Grass.png" id="3_bptpd"]
 [ext_resource type="FontFile" uid="uid://uytdjeivlqt4" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="4_o2vbf"]
 [ext_resource type="Script" path="res://scenes/title_label.gd" id="5_0ldto"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="6_i6vw2"]
 [ext_resource type="Texture2D" uid="uid://b126opnkv775h" path="res://assets/Tilesets/Hills.png" id="7_104pv"]
 [ext_resource type="Texture2D" uid="uid://bc2o2i6o6exty" path="res://assets/Tilesets/ashlands_tileset.png" id="7_i4t8r"]
 [ext_resource type="Texture2D" uid="uid://b3vf44536fxp5" path="res://assets/Tilesets/Tilled_Dirt.png" id="8_yh2yr"]
+[ext_resource type="AudioStream" uid="uid://blqfim8jmftq5" path="res://assets/music/ForestWalk-320bit(chosic.com).mp3" id="12_bn5gt"]
 [ext_resource type="PackedScene" uid="uid://ccms6wyu20qiu" path="res://scenes/npc.tscn" id="13_bgra4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kvb0"]
@@ -743,6 +745,16 @@ text = "GITHUB is a trash"
 horizontal_alignment = 1
 script = ExtResource("5_0ldto")
 
+[node name="Label" type="Label" parent="player"]
+offset_left = -52.0
+offset_top = -78.0
+offset_right = 62.0
+offset_bottom = -55.0
+horizontal_alignment = 1
+script = ExtResource("6_i6vw2")
+
+[node name="Timer" type="Timer" parent="player/Label"]
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
 position = Vector2(13, -93)
@@ -773,3 +785,7 @@ shape = SubResource("RectangleShape2D_vep0t")
 [node name="npc" parent="." instance=ExtResource("13_bgra4")]
 z_index = 5
 position = Vector2(-179, -129)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_bn5gt")
+autoplay = true

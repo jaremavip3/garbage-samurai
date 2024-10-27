@@ -39,6 +39,10 @@ func next_script():
 		$NinePatchRect.visible = false
 		emit_signal("diaglogue_is_finished")
 		return 
+	if current_dialogue_id%2 == 0:
+		$AudioStreamPlayer2D.play()
+	else:
+		$AudioStreamPlayer2D2.play()
 		
 	
 	$NinePatchRect/Name.text = dialogue[current_dialogue_id]['name'] 
