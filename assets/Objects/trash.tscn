@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmapc6v40dl06"]
+
+[ext_resource type="Script" path="res://scenes/trash.gd" id="1_devvh"]
+[ext_resource type="Texture2D" uid="uid://gk5e4qbbc2uh" path="res://assets/Objects/trash.png" id="2_y5e1v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4f8p"]
+radius = 4.0
+
+[node name="trash" type="Area2D"]
+z_index = 5
+script = ExtResource("1_devvh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(0.0429688, 0.0429688)
+texture = ExtResource("2_y5e1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 5
+shape = SubResource("CircleShape2D_f4f8p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

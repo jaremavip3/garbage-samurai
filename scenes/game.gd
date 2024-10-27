@@ -30,6 +30,14 @@ func _ready() -> void:
 		volcano_tree.global_position = Vector2(rand_x, rand_y)
 		add_child(volcano_tree)
 		
+	#spawn trash
+	var total_trash = randi_range(50, 200)
+	for i in total_trash:
+		var trash = preload("res://scenes/trash.tscn").instantiate()
+		rand_x = randi_range(-780, 780)
+		rand_y = randi_range(-510, 520)
+		trash.global_position = Vector2(rand_x, rand_y)
+		add_child(trash)
 		
 	
 
