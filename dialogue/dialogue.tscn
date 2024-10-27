@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://by712x0qrek5" path="res://assets/music/cartoon-phone-voice-88637.mp3" id="3_p21p8"]
 [ext_resource type="AudioStream" uid="uid://d0u1f7opkkdqj" path="res://assets/music/Voicy_ARK Dodo SFX .mp3" id="4_8jc3l"]
 
-[node name="Dialogue" type="Control"]
+[node name="Dialogue_cat" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -72.0
