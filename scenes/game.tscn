@@ -739,7 +739,7 @@ offset_right = 83.0
 offset_bottom = -27.0
 theme_override_fonts/font = ExtResource("4_o2vbf")
 theme_override_font_sizes/font_size = 8
-text = "Collect the trash..."
+text = "GITHUB is a trash"
 horizontal_alignment = 1
 script = ExtResource("5_0ldto")
 
