@@ -18,7 +18,7 @@ func _ready() -> void:
 	for i in range(20):
 		var rock = preload("res://scenes/stone.tscn").instantiate()
 		rand_x = randi_range(-300, 400)
-		rand_y = randi_range(-200, 200)
+		rand_y = randi_range(-200, 200)  
 		rock.global_position = Vector2(rand_x, rand_y)
 		add_child(rock)
 		
