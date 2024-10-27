@@ -25,10 +25,18 @@ func _ready() -> void:
 	randomize()
 	for i in range(40):
 		var volcano_tree = preload("res://scenes/VolcanoTree.tscn").instantiate()
-		rand_x = randi_range(-900, -350)
-		rand_y = randi_range(-200, 350)
+		rand_x = randi_range(-880, -320)
+		rand_y = randi_range(-568, 504)
 		volcano_tree.global_position = Vector2(rand_x, rand_y)
 		add_child(volcano_tree)
+	
+	randomize()
+	for i in range(40):
+		var cactus = preload("res://scenes/Cactus.tscn").instantiate()
+		rand_x = randi_range(-200, 400)
+		rand_y = randi_range(-200, 350)
+		cactus.global_position = Vector2(rand_x, rand_y)
+		add_child(cactus)
 		
 		
 	
